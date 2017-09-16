@@ -26,12 +26,11 @@ Menu, Tray, Icon, shell32.dll, 283 ; this changes the tray icon to a little keyb
 
 ;-------------2ND KEYBOARD USING LUAMACROS-----------------
 
-#IfWinActive ahk_exe Adobe Premiere Pro.exe ;---EVERYTHING BELOW THIS LINE WILL ONLY WORK INSIDE PREMIERE PRO. You can use Window Spy to determine the ahk_exe of any program, so that your macros will only work when and where you want them to.
 
 #IfWinActive ;---- This will allow for everything below this line to work in ANY application.
 
 ~F24::
-FileRead, key, C:\Users\TaranWORK\Documents\GitHub\2nd-keyboard\2nd keyboard support files\keypressed.txt
+FileRead, key, LUAMACROS/2nd keyboard if using luamacros.ahk\keypressed.txt
 tippy(key) ; this function will just launch a quick tooltip that shows you what key you pressed. OPTIONAL.
 If (key = "o")
 preset("flip horizontal") 
